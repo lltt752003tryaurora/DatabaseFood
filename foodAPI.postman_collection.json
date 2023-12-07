@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "1d4df593-2c15-4d5b-8930-b37ba379df7f",
+		"name": "foodAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31112225"
+	},
+	"item": [
+		{
+			"name": "danh sách like theo nhà hàng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/restaurant/get-likes-restaurant/2",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"restaurant",
+						"get-likes-restaurant",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danh sách like theo user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/user/get-likes-user/2",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user",
+						"get-likes-user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thêm like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"res_id\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/like/add-like",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"like",
+						"add-like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xóa like",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"res_id\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/like/remove-like",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"like",
+						"remove-like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thêm order cho 1 user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 2,\r\n    \"food_id\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/user/add-order-user",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user",
+						"add-order-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thêm đánh giá",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 7,\r\n    \"res_id\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/rate/add-rate",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"rate",
+						"add-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danh sách rate theo nhà hàng",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/restaurant/get-rates-restaurant/3",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"restaurant",
+						"get-rates-restaurant",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danh sách rate theo user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/user/get-rates-user/3",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user",
+						"get-rates-user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
